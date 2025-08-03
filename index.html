@@ -1,31 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Students Page</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Reimagined - Modern E-commerce</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>Add your Name here!</h1>
-  </header>
-  <main>
-    <ul id="student-list">
-      <!-- Students' names will be added here -->
-      
-        <li>
-               Patel Muhammad - I am GitHub Campus Expert ❤️
-        </li>
- 
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="logo-section">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>amazon</span>
+                </div>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Deliver to<br><strong>New York 10001</strong></span>
+                </div>
+            </div>
 
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-container">
+                    <select class="category-dropdown">
+                        <option>All</option>
+                        <option>Electronics</option>
+                        <option>Books</option>
+                        <option>Fashion</option>
+                        <option>Home & Garden</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Search Amazon Reimagined">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
 
+            <!-- Account & Cart Section -->
+            <div class="account-section">
+                <div class="language">
+                    <i class="fas fa-globe"></i>
+                    <span>EN</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="account">
+                    <span>Hello, Sign in<br><strong>Account & Lists</strong></span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="orders">
+                    <span>Returns<br><strong>& Orders</strong></span>
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                    <span>Cart</span>
+                </div>
+            </div>
+        </div>
 
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <div class="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                        <span>All</span>
+                    </div>
+                    <a href="#" class="nav-link">Today's Deals</a>
+                    <a href="#" class="nav-link">Customer Service</a>
+                    <a href="#" class="nav-link">Registry</a>
+                    <a href="#" class="nav-link">Gift Cards</a>
+                    <a href="#" class="nav-link">Sell</a>
+                </div>
+                <div class="nav-right">
+                    <a href="#" class="nav-link prime">Amazon Prime</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    </ul>
-  </main>
-  <footer>
-    <p>&copy; Create your first PR with me ❤️</p>
-  </footer>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-slide active">
+                    <div class="hero-text">
+                        <h1>Experience the Future of Shopping</h1>
+                        <p>Discover cutting-edge products with lightning-fast delivery and unmatched quality.</p>
+                        <button class="cta-button">Shop Now</button>
+                    </div>
+                    <div class="hero-image">
+                        <div class="placeholder-image hero-img">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="container">
+                <h2 class="section-title">Shop by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h3>Electronics</h3>
+                        <p>Latest gadgets and tech</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <h3>Fashion</h3>
+                        <p>Trendy clothing & accessories</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Home & Garden</h3>
+                        <p>Everything for your space</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Books</h3>
+                        <p>Expand your knowledge</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3>Gaming</h3>
+                        <p>Level up your play</p>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-dumbbell"></i>
+                        </div>
+                        <h3>Sports & Fitness</h3>
+                        <p>Stay active and healthy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-headphones"></i>
+                            </div>
+                            <div class="product-badge">Best Seller</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Premium Wireless Headphones</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(2,847)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$149.99</span>
+                                <span class="original-price">$199.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="product-badge">Limited Time</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Smartphone Pro Max</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(1,234)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$899.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-watch"></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>Smart Fitness Watch</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(5,692)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$299.99</span>
+                                <span class="original-price">$349.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <div class="placeholder-image">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>4K Digital Camera</h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(892)</span>
+                            </div>
+                            <div class="price">
+                                <span class="current-price">$599.99</span>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deals Section -->
+        <section class="deals-section">
+            <div class="container">
+                <h2 class="section-title">Today's Deals</h2>
+                <div class="deals-grid">
+                    <div class="deal-card">
+                        <div class="deal-badge">50% OFF</div>
+                        <div class="deal-content">
+                            <h3>Electronics Sale</h3>
+                            <p>Save big on top electronics</p>
+                            <div class="countdown">
+                                <span>Ends in: 12h 34m</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-card">
+                        <div class="deal-badge">Buy 2 Get 1</div>
+                        <div class="deal-content">
+                            <h3>Fashion Week</h3>
+                            <p>Mix and match your style</p>
+                            <div class="countdown">
+                                <span>Limited time offer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="deal-card">
+                        <div class="deal-badge">Free Shipping</div>
+                        <div class="deal-content">
+                            <h3>Home Essentials</h3>
+                            <p>Upgrade your living space</p>
+                            <div class="countdown">
+                                <span>This week only</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h4>Get to Know Us</h4>
+                        <ul>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">About Amazon</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Make Money with Us</h4>
+                        <ul>
+                            <li><a href="#">Sell products on Amazon</a></li>
+                            <li><a href="#">Become an Affiliate</a></li>
+                            <li><a href="#">Advertise Your Products</a></li>
+                            <li><a href="#">Self-Publish with Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Amazon Payment Products</h4>
+                        <ul>
+                            <li><a href="#">Amazon Business Card</a></li>
+                            <li><a href="#">Shop with Points</a></li>
+                            <li><a href="#">Reload Your Balance</a></li>
+                            <li><a href="#">Amazon Currency Converter</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Let Us Help You</h4>
+                        <ul>
+                            <li><a href="#">Amazon and COVID-19</a></li>
+                            <li><a href="#">Your Account</a></li>
+                            <li><a href="#">Your Orders</a></li>
+                            <li><a href="#">Shipping Rates & Policies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="logo">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>amazon</span>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">English</a>
+                        <a href="#">USD - U.S. Dollar</a>
+                        <a href="#">United States</a>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2024 Amazon Reimagined. A modern design showcase by a front-end developer.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple cart functionality
+        let cartCount = 0;
+        const cartElement = document.querySelector('.cart-count');
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                cartCount++;
+                cartElement.textContent = cartCount;
+                button.textContent = 'Added!';
+                button.style.backgroundColor = '#28a745';
+                
+                setTimeout(() => {
+                    button.textContent = 'Add to Cart';
+                    button.style.backgroundColor = '';
+                }, 1500);
+            });
+        });
+
+        // Hero slideshow indicators
+        const indicators = document.querySelectorAll('.indicator');
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                indicators.forEach(ind => ind.classList.remove('active'));
+                indicator.classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
