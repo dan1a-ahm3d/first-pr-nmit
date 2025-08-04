@@ -46,8 +46,8 @@ This project reimagines the traditional Amazon homepage with a focus on:
 - Interactive slideshow indicators
 
 ### Product Showcase
-- Category cards with hover lift animations
-- Product cards with badges and rating systems
+- Category cards with beautiful images and hover zoom effects
+- Product cards with real product photography, badges and rating systems
 - Sophisticated pricing display
 - Interactive cart functionality
 
@@ -75,9 +75,10 @@ This project reimagines the traditional Amazon homepage with a focus on:
 - Optimized typography scaling for different devices
 
 ### Interactive Elements
-- CSS transforms for hover effects
+- CSS transforms for hover effects and image zoom
 - Smooth transitions (0.2s - 0.6s)
 - Keyframe animations for floating elements
+- Real product and category images from Unsplash
 - JavaScript for cart functionality and slideshows
 
 ## 🎯 Design Goals Achieved

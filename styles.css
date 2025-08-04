@@ -418,26 +418,18 @@ body {
     align-items: center;
 }
 
-.placeholder-image {
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+.hero-img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
     border-radius: var(--radius-2xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 4rem;
     box-shadow: var(--shadow-xl);
     transition: transform 0.3s ease;
-}
-
-.placeholder-image:hover {
-    transform: scale(1.05) rotate(2deg);
-}
-
-.hero-img {
     animation: float 6s ease-in-out infinite;
+}
+
+.hero-img:hover {
+    transform: scale(1.05) rotate(2deg);
 }
 
 @keyframes float {
@@ -534,19 +526,25 @@ body {
     opacity: 0.05;
 }
 
-.category-icon {
-    width: 80px;
-    height: 80px;
+.category-image {
+    width: 100%;
+    height: 180px;
     margin: 0 auto var(--spacing-4);
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
     border-radius: var(--radius-xl);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: var(--font-size-3xl);
+    overflow: hidden;
     position: relative;
     z-index: 1;
+}
+
+.category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-image img {
+    transform: scale(1.1);
 }
 
 .category-card h3 {
@@ -596,16 +594,16 @@ body {
     padding: var(--spacing-6);
 }
 
-.product-image .placeholder-image {
+.product-img {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
+    object-fit: cover;
     border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-secondary);
-    font-size: var(--font-size-3xl);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
 }
 
 .product-badge {
@@ -914,9 +912,13 @@ body {
         font-size: var(--font-size-2xl);
     }
     
-    .placeholder-image {
-        width: 250px;
-        height: 250px;
+    .hero-img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .category-image {
+        height: 150px;
     }
     
     .section-title {
