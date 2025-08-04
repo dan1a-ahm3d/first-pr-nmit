@@ -17,15 +17,101 @@
         <li>
                Patel Muhammad - I am GitHub Campus Expert ❤️
         </li>
- 
-
-
-
 
     </ul>
+
+    <!-- Chat Box Section -->
+    <div class="chat-container">
+      <h2>Chat with Images</h2>
+      <div id="chat-messages" class="chat-messages">
+        <!-- Chat messages will appear here -->
+      </div>
+      
+      <div class="chat-input-container">
+        <input type="text" id="message-input" placeholder="Type your message..." class="message-input">
+        <input type="file" id="image-input" accept="image/*" class="image-input">
+        <label for="image-input" class="image-button">📷</label>
+        <button onclick="sendMessage()" class="send-button">Send</button>
+      </div>
+    </div>
   </main>
   <footer>
     <p>&copy; Create your first PR with me ❤️</p>
   </footer>
+
+  <script>
+    function sendMessage() {
+      const messageInput = document.getElementById('message-input');
+      const imageInput = document.getElementById('image-input');
+      const chatMessages = document.getElementById('chat-messages');
+      
+      const messageText = messageInput.value.trim();
+      const imageFile = imageInput.files[0];
+      
+      if (messageText || imageFile) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = 'chat-message';
+        
+        if (messageText) {
+          const textDiv = document.createElement('div');
+          textDiv.className = 'message-text';
+          textDiv.textContent = messageText;
+          messageDiv.appendChild(textDiv);
+        }
+        
+        if (imageFile) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            const img = document.createElement('img');
+            img.src = e.target.result;
+            img.className = 'message-image';
+            img.alt = 'Uploaded image';
+            messageDiv.appendChild(img);
+          };
+          reader.readAsDataURL(imageFile);
+        }
+        
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        
+        // Clear inputs
+        messageInput.value = '';
+        imageInput.value = '';
+      }
+    }
+
+    // Allow Enter key to send message
+    document.getElementById('message-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+
+    // Handle paste events for images
+    document.addEventListener('paste', function(e) {
+      const items = e.clipboardData.items;
+      for (let i = 0; i < items.length; i++) {
+        if (items[i].type.indexOf('image') !== -1) {
+          const blob = items[i].getAsFile();
+          const reader = new FileReader();
+          reader.onload = function(event) {
+            const chatMessages = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'chat-message';
+            
+            const img = document.createElement('img');
+            img.src = event.target.result;
+            img.className = 'message-image';
+            img.alt = 'Pasted image';
+            messageDiv.appendChild(img);
+            
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+          };
+          reader.readAsDataURL(blob);
+        }
+      }
+    });
+  </script>
 </body>
 </html>
